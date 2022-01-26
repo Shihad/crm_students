@@ -29,12 +29,12 @@
     <div class="deal_div">Новая </div>
     <div class="deal_div">Документы </div>
     <div class="deal_div">В работе </div>
-    <div class="deal_div">Закрыта </div>
-  1</div>
+    <div class="deal_div">Закрыто </div>
+  </div>
 <div>2</div>
 <div>3</div>
-<div>7</div>
-<div>4</div>
+<div class="new">Новое</div>
+<div >Подготовка локументов</div>
 <div>5</div>
 <div>6</div>
 <div>7</div>
@@ -44,4 +44,24 @@
   Привет, я страница CRM-системы!
 
   </body>
+
+
+<script src="jquery.js"> </script>
+<script src="jquery-ui.js"> </script>
+<script>
+$(function() {
+  $(".new").droppable(
+    { drop:function (){
+      $(".drop").text("New")
+                              }
+        } )
+      } );
+
+
+
+
+</script>
+
+
+
 </html>
