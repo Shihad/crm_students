@@ -45,23 +45,35 @@ grid-column: 8/10;
 grid-column: 10/12;
 }
 
-#deals2{
+.present_page{
 grid-column: 2/4;
-background-color: green;
+background-color: white;
 }
-#finddeal{
+.present_page_find{
 grid-column: 4/10;
 background-color: white;
 }
-#adddeal{
+.present_page_add{
 grid-column: 10/12;
+background-color: white;
 background-color: green;
+border: 3px solid yellowgreen;
+border-radius: 30px;
 }
 #deals_container {
 grid-column: 2/12;
 grid-row:4 span 4;
 display:grid;
 grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+
+}
+
+#contacts_container {
+grid-column: 2/12;
+grid-row:4 span 4;
+display:grid;
+grid-template-columns: repeat(5, 1fr);
 grid-template-rows: 20px 1fr 1fr 1fr 1fr;
 
 }

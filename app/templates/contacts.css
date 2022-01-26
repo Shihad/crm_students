@@ -48,13 +48,15 @@ background-color: red
 grid-column: 10/12;
 background-color: white;
 }
-#deals2{
+.present_page{
 grid-column: 2/4;
 background-color: green;
 }
-#finddeal{
+.present_page_find{
 grid-column: 4/10;
-background-color: white;
+background-color: green;
+border: 3px solid yellowgreen;
+border-radius: 10px;
 }
 #adddeal{
 grid-column: 10/12;
