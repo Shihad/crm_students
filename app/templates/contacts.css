@@ -20,7 +20,7 @@ background-color: yellowgreen;
 grid-column: 3/9;
 }
 #time{
-background-color: green;
+background-color: whitespace;
 }
 #state{
 grid-column: 10/12;
