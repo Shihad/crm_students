@@ -87,7 +87,10 @@ grid-row:4 span 4;
 display:grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: 20px 1fr 1fr 1fr 1fr;
-
+background-color: white;
+font-size: 15px;
+font-weight: bolder;
+color: orange;
 }
 #clear {
 	background-color: white;
@@ -96,8 +99,7 @@ grid-template-rows: 20px 1fr 1fr 1fr 1fr;
 .deal_div{
   width: 100%;
   height: 100%;
-  background-color: yellowgreen;
-
+	background-color: rgb(157, 157, 157);
 }
 
 .page_item {
@@ -112,4 +114,25 @@ grid-template-rows: 20px 1fr 1fr 1fr 1fr;
   color: orange;
   font-size: 25px;
   font-weight: bolder;
+}
+
+.sdelka{
+	background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+}
+
+.sdelka1{
+	background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+}
+
+.deal {
+	background-color: white;
+	font-size: 15px;
+	font-weight: bolder;
+	color: rgb(0, 0, 0);
 }
