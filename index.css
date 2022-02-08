@@ -1,0 +1,138 @@
+body {
+  display:grid;
+  grid-template-columns: 50px repeat(10, 1fr) 50px;
+  grid-template-rows: 50px 80px 80px 80px 1fr;
+  grid-gap:5px;
+}
+div{
+height: 100%;
+width: 100%;
+background-color: blue;
+}
+#menu {
+color: orange;
+background-color: white;
+font-size: 50px;
+font-weight: bolder;
+}
+
+#logo{
+	background-color: white;
+	font-size: 15px;
+	font-weight: bolder;
+	color: orange;
+}
+#search{
+grid-column: 3/9;
+background-color: rgb(255, 255, 255);
+	font-size: 10px;
+	color: rgb(255, 206, 116);
+	border: 2px solid orange;
+}
+#time{
+background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+	text-align: center;
+}
+#state{
+grid-column: 10/12;
+background-color: white;
+	font-size: 30px;
+	color: orange;
+}
+#ava{
+background-color: red;
+}
+#deals{
+grid-column: 2/4;
+}
+#kontaks{
+grid-column: 4/6;
+}
+#comp{
+grid-column: 6/8;
+}
+#sale{
+grid-column: 8/10;
+}
+#op-ns{
+grid-column: 10/12;
+}
+
+#deals2{
+grid-column: 2/4;
+background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+}
+#finddeal{
+grid-column: 4/10;
+background-color: rgb(255, 255, 255);
+	font-size: 10px;
+	color: rgb(255, 206, 116);
+	border: 2px solid orange;
+	text-align: center;
+}
+#adddeal{
+grid-column: 10/12;
+background-color: orange;
+color: white
+}
+#deals_container {
+grid-column: 2/12;
+grid-row:4 span 4;
+display:grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+background-color: white;
+font-size: 15px;
+font-weight: bolder;
+color: orange;
+}
+#clear {
+	background-color: white;
+}
+
+.deal_div{
+  width: 100%;
+  height: 100%;
+	background-color: rgb(157, 157, 157);
+}
+
+.page_item {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+.page_active {
+  background-color: whitesmoke;
+  color: orange;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.sdelka{
+	background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+}
+
+.sdelka1{
+	background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+}
+
+.deal {
+	background-color: white;
+	font-size: 15px;
+	font-weight: bolder;
+	color: rgb(0, 0, 0);
+}

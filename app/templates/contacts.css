@@ -10,21 +10,37 @@ width: 100%;
 background-color: blue;
 }
 #menu {
-background-color: yellow;
+color: orange;
+background-color: white;
+font-size: 50px;
+font-weight: bolder;
 }
-#logo{
 
-background-color: yellowgreen;
+#logo{
+	background-color: white;
+	font-size: 15px;
+	font-weight: bolder;
+	color: orange;
 }
 #search{
 grid-column: 3/9;
+background-color: rgb(255, 255, 255);
+	font-size: 10px;
+	color: rgb(255, 206, 116);
+	border: 2px solid orange;
 }
 #time{
-background-color: whitespace;
+background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
+	text-align: center;
 }
 #state{
 grid-column: 10/12;
-background-color: yellow;
+background-color: white;
+	font-size: 30px;
+	color: orange;
 }
 #ava{
 background-color: red;
@@ -50,17 +66,23 @@ background-color: white;
 }
 .present_page{
 grid-column: 2/4;
-background-color: green;
+background-color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	color: orange;
 }
 .present_page_find{
 grid-column: 4/10;
-background-color: green;
-border: 3px solid yellowgreen;
-border-radius: 10px;
+background-color: rgb(255, 255, 255);
+	font-size: 10px;
+	color: rgb(255, 206, 116);
+	border: 2px solid orange;
+	text-align: center;
 }
 #adddeal{
 grid-column: 10/12;
-background-color: green;
+background-color: orange;
+color: white
 }
 #deals_container {
 grid-column: 2/12;
@@ -69,6 +91,9 @@ display:grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: 20px 1fr 1fr 1fr 1fr;
 
+}
+#clear {
+	background-color: white;
 }
 
 .deal_div{
