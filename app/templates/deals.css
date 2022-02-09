@@ -4,6 +4,7 @@ body {
   grid-template-rows: 50px 80px 80px 80px 1fr;
   grid-gap:5px;
 }
+
 div{
 height: 100%;
 width: 100%;
