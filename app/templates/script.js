@@ -5,7 +5,7 @@ $(".page_item").click(function() {
   $(this).addClass("page_active");
 })
 
-let num=1;
+  let num=1;
   function new_deals(){
   $('<div class="deal"> Сделка '+num+'</div>').appendTo("#new_deals_column");
   num++;
@@ -15,9 +15,7 @@ let num=1;
   	$('.deal').draggable(
     {
         containment: "#deals_container",
-        snap: ".deals_column",
-        snapMode: "top",
-        snapTolerance: 50
+        revert:"invalid"
       }
     );
 
@@ -26,7 +24,27 @@ let num=1;
 
 $('.deals_column').droppable({
       drop: function(event, ui) {
-           ui.draggable.text("Оставлено")
+
+           ui.draggable.appendTo(event.target);
+           ui.draggable.removeClass("*");
+           ui.draggable.addClass("deal")
+           if (event.target.id=="new_deals_column") {
+             ui.draggable.addClass("deal_new");
+             ui.draggable.text("Новая");
+           }
+           if (event.target.id=="prepare_deals_column") {
+             ui.draggable.addClass("deal_prepare");
+             ui.draggable.text("Подготовка");
+           }
+           if (event.target.id=="working_deals_column") {
+             ui.draggable.addClass("deal_work");
+             ui.draggable.text("В работе");
+           }
+           if (event.target.id=="closed_deals_column") {
+             ui.draggable.addClass("deal_close");
+             ui.draggable.text("Закрыта");
+           }
+           console.log(event.target);
       }
   });
 /*
