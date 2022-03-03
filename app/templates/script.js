@@ -6,7 +6,11 @@ $(".page_item").click(function() {
 })
 
   let num=1;
-  function new_deals(){
+
+
+  function add_deal(){
+    $( "#dialog_add_deal" ).dialog( "open" );
+    /*
   $('<div class="deal"> Сделка '+num+'</div>').appendTo("#new_deals_column");
   num++;
 
@@ -19,8 +23,40 @@ $(".page_item").click(function() {
       }
     );
 
-  });
+  });*/
 }
+
+$( function () {
+  $("#dialog_add_deal").dialog({
+    autoOpen: false,
+    show: {
+      effect: "blind",
+      duration: 1000
+    },
+    hide: {
+      effect: "blind",
+      duration: 1000
+    },
+    resizable:false,
+    height:"auto",
+    width:400,
+    modal:true,
+    buttons: {
+      "Создать сделку": function() {
+        $(this).dialog("close");
+      },
+      "Отмена": function () {
+          $(this).dialog("close");
+      }
+
+    }
+  });
+});
+
+$( function() {
+  $( "#datepicker_start" ).datepicker();
+    $( "#datepicker_end" ).datepicker();
+} );
 
 $('.deals_column').droppable({
       drop: function(event, ui) {

@@ -4,11 +4,12 @@ body {
   grid-template-rows: 50px 80px 80px 80px 1fr;
   grid-gap:5px;
 }
+/*
 div{
 height: 100%;
 width: 100%;
 
-}
+}*/
 #menu {
 background-color: whitesmoke;
 }
@@ -35,36 +36,40 @@ background-color: yellow;
 #ava{
 background-color: red;
 }
-#deals{
+#deals_page{
 grid-column: 2/4;
 }
-#kontaks{
+#contacts_page{
 grid-column: 4/6;
 }
-#comp{
+#companies_page{
 grid-column: 6/8;
 }
-#sale{
+#goods_page{
 grid-column: 8/10;
 }
-#op-ns{
+#settings_page{
 grid-column: 10/12;
 }
 
-.present_page{
+#present_page{
 grid-column: 2/4;
 background-color: white;
 }
-.present_page_find{
+#present_page_find{
 grid-column: 4/10;
 background-color: white;
 }
-.present_page_add{
+#present_page_add{
 grid-column: 10/12;
 background-color: white;
 background-color: green;
 border: 3px solid yellowgreen;
 border-radius: 30px;
+}
+
+#dialog_add_deal {
+
 }
 .new{
   grid-column: 2/4;

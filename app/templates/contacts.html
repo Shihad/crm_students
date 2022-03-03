@@ -8,23 +8,23 @@
   <body>
 <div id="menu">Меню</div>
 <div id="logo">BestLogo</div>
-<div id=search>Поиск</div>
+<div id=search>Введите запрос...</div>
 <div id="time">10:30</div>
-<div id="state">мой статус: работаю</div>
-<div id="ava">6</div>
-<div>2</div>
-<div id="deals" class ="page_item page_active">сделки</div>
-<div id="kontaks" class ="page_item">контакты</div>
-<div id="comp"class ="page_item">компании</div>
-<div id="sale"class ="page_item">товары</div>
-<div id="op-ns"class ="page_item" >настройки</div>
-<div>3</div>
-<div>4</div>
-<div class="present_page">Контакты</div>
-<div class="present_page_find">...</div>
-<div class="present_page_add">Добавить контакты</div>
-<div>9</div>
-<div>10</div>
+<div id="state">{{user.state}}</div>
+<div id="ava">{{user.avatar}}</div>
+<div id="clear"></div>
+<div id="deals_page" class ="page_item page_active">сделки</div>
+<div id="contacts_page" class ="page_item">контакты</div>
+<div id="companies_page" class ="page_item">компании</div>
+<div id="goods_page"class ="page_item">товары</div>
+<div id="settings_page" class ="page_item" >настройки</div>
+<div id="clear"></div>
+<div id="clear"></div>
+<div id="present_page" class="deals_page_header">Контакты</div>
+<div id="present_page_find" class="contacts_page_find">Поиск по контактам</div>
+<div id="present_page_add" class="deals_page_add" onclick="add_contact()">Добавить контакты</div>
+<div></div>
+<div></div>
 <div id="contacts_container" >
     <div class="deal_div">Фото </div>
     <div class="deal_div">ФИО </div>
@@ -40,19 +40,7 @@
 
 
 
-  1</div>
-<div>2</div>
-<div>3</div>
-<div>7</div>
-<div>4</div>
-<div>5</div>
-<div>6</div>
-<div>7</div>
-<div>8</div>
-<div>9</div>
-<div>10</div>
-  Привет, я страница CRM-системы!
-
+  </div>
   </body>
 <script src="jquery.js" charset="utf-8"></script>
 <script src="script.js" charset="utf-8"></script>

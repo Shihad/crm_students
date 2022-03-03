@@ -4,30 +4,36 @@
     <title></title>
     <meta content="">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="jquery-ui.css">
 
   </head>
   <body>
-<div id="menu">...</div>
-<div id="logo"> BestLOGO </div>
-<div id="search"> Введите запрос... </div>
+<div id="menu">Меню</div>
+<div id="logo">BestLOGO </div>
+<div id="search">Введите запрос... </div>
 <div id="time">10:30</div>
-<div id="state"> - РАБОТАЮ</div>
-<div id="ava">.</div>
+<div id="state">{{user.state}}</div>
+<div id="ava">{{user.avatar}}</div>
 <div id="clear"> </div>
-<div id="deals" class ="page_item page_active">сделки</div>
-<div id="kontaks" class ="page_item">контакты</div>
-<div id="comp"class ="page_item">компании</div>
-<div id="sale"class ="page_item">товары</div>
-<div id="op-ns"class ="page_item" >настройки</div>
+<div id="deals_page" class ="page_item page_active">сделки</div>
+<div id="contacts_page" class ="page_item">контакты</div>
+<div id="companies_page"class ="page_item">компании</div>
+<div id="goods_page"class ="page_item">товары</div>
+<div id="settings_page"class ="page_item" >настройки</div>
 <div id="clear"></div>
 <div id="clear"></div>
-<div id="deals2">СДЕЛКИ</div>
-<div id="finddeal"> Поиск по сделакм</div>
-<div id="adddeal" onclick="new_deals()">
-	ДОБАВИТЬ
-	<br>
-	СДЕЛКУ
+<div id="present_page" class="deals_page_header">Сделки</div>
+<div id="present_page_find" class="deals_page_find"> Поиск по сделкам</div>
+<div id="present_page_add" class="deals_page_add" onclick="add_deal()">
+	Добавить сделку
 </div>
+<div id = "dialog_add_deal" > Привет, я - новая сделка.
+  <form class="new_deal_form" action="index.html" method="post">
+    Описание:<input type="text" name="" value=""> <br>
+    Дата начала: <input type="text" id="datepicker_start"><br>
+    Дата окончания: <input type="text" id="datepicker_end"><br>
+  </form>
+ </div>
 
 <div id="clear"></div>
 <div id="deals_container" >
@@ -40,8 +46,8 @@
     <div id = "working_deals_column" class="deals_column"> </div>
     <div id = "closed_deals_column" class="deals_column" > </div>
   </div>
-<div>2</div>
-<div  id="clear"></div>
+<div></div>
+<divid="clear"></div>
 
   </body>
 <script src="jquery.js" charset="utf-8"></script>
