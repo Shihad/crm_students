@@ -41,10 +41,14 @@
     <div class="deal_div">Документы </div>
     <div class="deal_div">В работе </div>
     <div class="deal_div">Закрыта </div>
-    <div id = "new_deals_column" class="deals_column"> </div>
+
+    <div id = "new_deals_column" class="deals_column">{% for new_deal in new_deals %}
+        <div class="deal"> {{new_deal.description}} '+num+'</div>
+      {%endfor%} </div>
     <div id = "prepare_deals_column" class="deals_column"> </div>
     <div id = "working_deals_column" class="deals_column"> </div>
     <div id = "closed_deals_column" class="deals_column" > </div>
+
   </div>
 <div></div>
 <divid="clear"></div>

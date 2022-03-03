@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='jquery-ui.css')}}">
+
+  </head>
+  <body>
+<div id="menu">...</div>
+<div id="logo"> BestLOGO </div>
+<div id="search"> Введите запрос... </div>
+<div id="time">10:30</div>
+<div id="state"> - РАБОТАЮ</div>
+<div id="ava"><img src={{url_for('static',filename=user.avatar)}} width="100%",height="100%"></div>
+<div id="clear"> </div>
+<div id="deals" class ="page_item page_active">сделки</div>
+<div id="kontaks" class ="page_item">контакты</div>
+<div id="comp"class ="page_item">компании</div>
+<div id="sale"class ="page_item">товары</div>
+<div id="op-ns"class ="page_item" >настройки</div>
+<div id="clear"></div>
+<div id="clear"></div>
+<div id="deals2">СДЕЛКИ</div>
+<div id="finddeal"> Поиск по сделкам</div>
+<button type="button" name="button" onClick="new_deals()">
+     <div id="adddeal">
+    ДОБАВИТЬ
+    <br>
+    СДЕЛКУ
+    </div>
+    <div id="dialog_add_deal">
+      <form action="" method="post">
+        <input name='description' value="Название сделки">  </input>
+        <div>Начало:<input name="start_date" id="datepicker_start"> </div>
+        <div>Дедлайн:<input name="end_date" id="datepicker_end"> </div>
+
+  <fieldset>
+
+    <label for="worker">Ответственный</label>
+    <select name="worker" id="worker">
+      <option disabled selected>Ответственный:</option>
+      {% for worker in workers %}
+        <option>{{worker.name}} </option>
+      {%endfor%}
+
+    </select>
+  </fieldset>
+        <div>
+        <input type="submit">
+        </div>
+      </form>
+    </div>
+</button>
+
+<div id="clear"></div>
+<div id="deals_container" >
+    <div class="deal_div">Новая </div>
+    <div class="deal_div">Документы </div>
+    <div class="deal_div">В работе </div>
+    <div class="deal_div">Закрыта </div>
+
+    <div id = "new_deals_column" class="deals_column">{% for new_deal in new_deals %}
+        <div class="deal"> {{new_deal.description}} <br>
+          Ответственный: {{new_deal.responsible_id}} <br>
+          Участники:
+          {% for participant in new_deal.participants %}
+            {{participant.name}} <br>
+          {%endfor%}
+          Дата окончания: {{new_deal.end_date}}
+        </div>
+      {%endfor%} </div>
+    <div id = "prepare_deals_column" class="deals_column">
+      {% for prepare_deal in prepare_deals %}
+          <div class="deal"> {{prepare_deal.description}} <br>
+            Ответственный: {{prepare_deal.responsible_id}} <br>
+            Участники:
+            {% for participant in prepare_deal.participants %}
+              {{participant.name}} <br>
+            {%endfor%}
+            Дата окончания: {{prepare_deal.end_date}}
+          </div>
+        {%endfor%}  </div>
+    <div id = "working_deals_column" class="deals_column"> </div>
+    <div id = "closed_deals_column" class="deals_column" > </div>
+
+  </div>
+<div>2</div>
+<div  id="clear"></div>
+
+  </body>
+<script src="{{url_for('static',filename='jquery.js')}}" charset="utf-8"></script>
+<script src="{{url_for('static',filename='jquery-ui.js')}}" charset="utf-8"></script>
+<script src="{{url_for('static',filename='script.js')}}" charset="utf-8"></script>
+</html>
