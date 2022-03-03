@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <style>
+   #dialog {
+     width: 400px;
+     height: auto;
+     border: 1px solid red;
+
+     background-color: yellow;
+   }
+    </style>
+  </head>
+  <body>
+    <div id="dialog" title="Dialog Title"> Это диалоговое окно </div>
+    <button type="button" name="button" id="button" onclick="openDialog()">Кнопка</button>
+    <div id= "reaction" > </div>
+  </body>
+  <script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script type="text/javascript">
+
+function openDialog() {
+$( "#dialog" ).dialog( "open" );
+
+}
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+        $("#reaction").text("Hello!");
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+        $("#reaction").text("Bye!");
+			}
+		}
+	]
+});
+
+
+</script>
+</html>

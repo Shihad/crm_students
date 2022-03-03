@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='new_web_css.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='jquery-ui.css')}}">
+  <script src="{{url_for('static',filename='jquery.js')}}" charset="utf-8"></script>
+  <script src="{{url_for('static',filename='jquery-ui.js')}}" charset="utf-8"></script>
+
+
+</head>
+<body>
+  <div id="dialog" title="Новый чат">
+    <a onclick="new_person()">Добавить сотрудника</a><br>
+    <a>Создать групповой чат</a><br>
+    <a>Создать канал</a>
+  </div>
+
+
+
+
+
+
+
+
+  <div id="top"> </div>
+
+  <div id="chats" class="nonactive active" onclick="active_list('#chats')" >Чаты</div>
+
+  <div id="notice" class="nonactive" onclick="active_list('#notice')">Уведомления</div>
+
+  <div id="lines" class="nonactive" onclick="active_list('#lines')">Линии</div>
+
+  <div id="title">Чаты и Звонки</div>
+
+  <div id="dialog_add_contact">
+    <form action="" method="post">
+      <input name='surname' value="Фамилия">  </input>
+      <input name='name' value="Имя">  </input>
+      <input name='patronim' value="Отчество">  </input>
+      <input name='position' value="Должность">  </input>
+
+      <div>
+      <input type="submit">
+      </div>
+    </form>
+  </div>
+
+
+  <div id="main_chats" class="nonactive2 active2">
+      {% for worker in workers %}
+    <div class="message">
+      <img src="{{url_for('static',filename='ava2.png')}}" class="avatar" alt="">
+      <div class="text">{{worker.name}}</div>
+    </div>
+    {%endfor%}
+
+  </div>
+
+  <div id="main_notice" class="nonactive2">
+    <img src="{{url_for('static',filename='notice_main_png2.png')}}" id="main_notice_img" alt="">
+    <h2 id="no_notice">Нет новых уведомлений</h2>
+  </div>
+
+  <div id="main_lines" class="nonactive2">
+  Здесь вы найдете список <br>
+  чатов с вашими клиентами!
+
+  </div>
+
+
+
+  <div id="plus" >
+    <img id="plusimg"  src="{{url_for('static',filename='plus.png')}}" onclick="openDialog()" alt="">
+    <div id= "reaction" > </div>
+  </div>
+
+
+  <div id="search">
+
+    <img id='searchimg' src="{{url_for('static',filename='search.png')}}" alt="">
+
+  </div>
+
+  <div id="menu"  class="dropdown">
+
+    <img id='menuimg' src="{{url_for('static',filename='menu.png')}}" alt=""  onclick="new_menu()" class="dropbtn">
+
+    <div id="myDropdown" class="dropdown-content">
+      <a href="">Прочитать всё</a>
+    </div>
+
+  </div>
+
+  <div id="bottom"> </div>
+
+  <div id="chatsbottom">
+    <img id='chatsimg' src="{{url_for('static',filename='chats.png')}}" alt="">
+    Чаты
+  </div>
+
+  <div id="news">
+    <img id='newsimg' src="{{url_for('static',filename='news2.png')}}" alt="">
+    Новости
+  </div>
+
+  <div id="problems">
+    <img id='problemsimg' src="{{url_for('static',filename='problems.png')}}" alt="">
+    Задачи
+  </div>
+
+  <div id="more">
+    <img id='moreimg' src="{{url_for('static',filename='menu2.png')}}" alt="">
+    Еще
+  </div>
+
+
+
+
+</body>
+  <script src="{{url_for('static',filename='script_contacts.js')}}" charset="utf-8"></script>
+
+
+</html>

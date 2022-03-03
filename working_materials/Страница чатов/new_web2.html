@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="new_web_css.css">
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jquery-ui.js"></script>
+</head>
+<body>
+  <div id="dialog" title="Новый чат">
+    <a onclick="new_person()">Добавить сотрудника</a><br>
+    <a>Создать групповой чат</a><br>
+    <a>Создать канал</a>
+  </div>
+
+
+
+
+
+
+
+
+  <div id="top"> </div>
+
+  <div id="chats" class="nonactive active" onclick="active_list('#chats')" >Чаты</div>
+
+  <div id="notice" class="nonactive" onclick="active_list('#notice')">Уведомления</div>
+
+  <div id="lines" class="nonactive" onclick="active_list('#lines')">Линии</div>
+
+  <div id="title">Чаты и Звонки</div>
+
+
+
+  <div id="main_chats" class="nonactive2 active2">
+
+    <div class="message">
+      <img src="ava2.png" class="avatar" alt="">
+      <div class="text">Сотрудник 1</div>
+    </div>
+
+  </div>
+
+  <div id="main_notice" class="nonactive2">
+    <img src="notice_main_png2.png" id="main_notice_img" alt="">
+    <h2 id="no_notice">Нет новых уведомлений</h2>
+  </div>
+
+  <div id="main_lines" class="nonactive2">
+  Здесь вы найдете список <br>
+  чатов с вашими клиентами!
+
+  </div>
+
+
+
+  <div id="plus" >
+    <img id="plusimg"  src="plus.png" onclick="openDialog()" alt="">
+    <div id= "reaction" > </div>
+  </div>
+
+
+  <div id="search">
+
+    <img id='searchimg' src="search.png" alt="">
+
+  </div>
+
+  <div id="menu"  class="dropdown">
+
+    <img id='menuimg' src="menu.png" alt=""  onclick="new_menu()" class="dropbtn">
+
+    <div id="myDropdown" class="dropdown-content">
+      <a href="">Прочитать всё</a>
+    </div>
+
+  </div>
+
+  <div id="bottom"> </div>
+
+  <div id="chatsbottom">
+    <img id='chatsimg' src="chats.png" alt="">
+    Чаты
+  </div>
+
+  <div id="news">
+    <img id='newsimg' src="news2.png" alt="">
+    Новости
+  </div>
+
+  <div id="problems">
+    <img id='problemsimg' src="problems.png" alt="">
+    Задачи
+  </div>
+
+  <div id="more">
+    <img id='moreimg' src="menu2.png" alt="">
+    Еще
+  </div>
+
+
+
+
+</body>
+
+<script type="text/javascript" src="script.js"> </script>
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+</html>

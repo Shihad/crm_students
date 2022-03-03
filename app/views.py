@@ -157,9 +157,9 @@ db.session.add(task)
 db.session.commit()
 
 
-@app.route("/index/<uid>",methods=['POST','GET'])
-@app.route("/<uid>",methods=['POST','GET'])
-def index(uid):
+@app.route("/index",methods=['POST','GET'])
+@app.route("/",methods=['POST','GET'])
+def index():
 	if request.method=='POST':
 		print(request.form)
 		desc=request.form['description']
@@ -179,7 +179,6 @@ def index(uid):
 		task.end_date= end_date
 		current_db_sessions = db.session.object_session(task)
 		current_db_sessions.add(task)
-		print(dir(current_db_sessions))
 		current_db_sessions.commit()
 		users=User.query.all()
 		user=User.query.filter(User.id==uid).first()
@@ -188,11 +187,35 @@ def index(uid):
 		return render_template("deals_flask.html",workers=users,user=user,new_deals=new_deals,prepare_deals=prepare_deals)
 	else:
 		users=User.query.all()
-		user=User.query.filter(User.id==uid).first()
+		user=User.query.filter(User.id==1).first()
 		new_deals=Task.query.filter(Task.status=="Начата").all()	
 		prepare_deals=Task.query.filter(Task.status=="В процессе").all()
 		return render_template("deals_flask.html",workers=users,user=user,new_deals=new_deals,prepare_deals=prepare_deals)
 
+@app.route("/contacts",methods=['POST','GET'])
+def contacts():
+	if request.method=='POST':
+		print(request.form)
+		name=request.form['name']
+		surname=request.form['surname']
+		patronim=request.form['patronim']
+		position=request.form['position']
+		user=User()
+		user.name=name
+		user.surname=surname
+		user.patronim=patronim
+		user.position=position
+		#current_db_sessions = db.session.object_session(user)
+		#current_db_sessions.add(user)
+		#current_db_sessions.commit()
+		db.session.add(user)
+		db.session.commit()
+		users=User.query.all()
+		return render_template('contacts_mobile_flask.html',workers=users)
+	else:
+		users=User.query.all()
+		return render_template('contacts_mobile_flask.html',workers=users)
+	
 
 
 app.run(debug=True)
